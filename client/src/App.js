@@ -1,6 +1,6 @@
 import "./index.css";
 
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { HashRouter, Route, Routes} from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <div className="root-wrap">
-      <BrowserRouter>
+      <HashRouter basename={process.env.PUBLIC_URL}>
           <Header/>
           <Routes>
           <Route exact path="/" element={<Home/>} />
@@ -30,7 +30,7 @@ function App() {
             <Route path="/tv/:title" element={<TVDetail/>}/>
             <Route path="/login" element={<Login/>}/>
           </Routes>
-      </BrowserRouter>
+      </HashRouter>
       </div>
     </div>
   );

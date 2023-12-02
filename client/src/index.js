@@ -6,7 +6,7 @@ import './index.css';
 import App from './App';
 
 ReactDOM.render(
-  <Provider store={store} basename={process.env.PUBLIC_URL}>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')
