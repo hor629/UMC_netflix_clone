@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <div className="root-wrap">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Header/>
           <Routes>
           <Route exact path="/" element={<Home/>} />
